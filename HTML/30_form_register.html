@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원 가입</title>
     <style>
-        #container{
-            width: 600px;
-            margin: 10px auto;
-        }
+
     </style>
 </head>
+
 <body>
     <div id="container">
-        <h1>회원 가입을 환영합니다.</h1>
-        <form action="regiser.jsp">
+        <h1>회원 가입을 환영합니다</h1>
+        <form action="register.jsp">
             <fieldset>
                 <legend>사용자 정보</legend>
                 <ul>
@@ -23,8 +22,8 @@
                         <input type="text" id="uid">
                     </li>
                     <li>
-                        <label for="uemail">이메일</label>
-                        <input type="email" id="uemail">
+                        <label for="umail">이메일</label>
+                        <input type="email" id="umail">
                     </li>
                     <li>
                         <label for="pwd1">비밀번호</label>
@@ -38,17 +37,27 @@
             </fieldset>
             <fieldset>
                 <legend>이벤트와 새로운 소식</legend>
-                <input type="radio" name="mailing" id="mailing_y" value="mailing_yes">
-                <label for="mailing_y"> 메일 수신</label>
-                <input type="radio" name="mailing" id="mailing_n" value="mailing_no">
-                <label for="mailing_n"> 메일 수신 안 함</label>
-                
+                <ul id="shipping">
+                    <li>
+                        <label for="user-name">이름</label>
+                        <input type="text" id="user-name">
+                    </li>
+                    <li>
+                        <label for="addr">배송 주소</label>
+                        <input type="text" id="addr">
+                    </li>
+                    <li>
+                        <label for="mail">이메일</label>
+                        <input type="email" id="mail">
+                    </li>
+                    <li>
+                        <label for="phone">연락처</label>
+                        <input type="tel" id="phone">
+                    </li>
+                </ul>
             </fieldset>
-            <div id="buttons">
-                <input type="submit" value="가입하기">
-                <input type="submit" value="취소">
-            </div>
         </form>
     </div>
 </body>
+
 </html>
