@@ -13,24 +13,24 @@
             <p><b>주문할 상품을 선택해주세요.</b></p>
             <ul>
                 <li>
-                    <label><input type="checkbox" value="s_3">선물용 3KG</label>
+                    <label><input type="checkbox" value="s_3">선물용 3kg</label>
                     <input type="number" min="0" max="5">개
                 </li>
                 <li>
-                    <label><input type="checkbox" value="s_5">선물용 5KG</label>
+                    <label><input type="checkbox" value="s_5">선물용 5kg</label>
                     <input type="number" min="0" max="3" value="1">개
                 </li>
                 <li>
-                    <label><input type="checkbox" value="f_3">가정용 3KG</label>
-                    <input type="range" min="0" max="5">개
+                    <label><input type="checkbox" value="f_3">가정용 3kg</label>
+                    <input type="number" min="0" max="5">개
                 </li>
                 <li>
-                    <label><input type="checkbox" value="f_5">가정용 5KG</label>
-                    <input type="range" min="0" max="3" value="1">개
+                    <label><input type="checkbox" value="f_5">가정용 5kg</label>
+                    <input type="number" min="0" max="3" value="1">개
                 </li>
             </ul>
             <p><b>포장 선택</b></p>
-            <!-- radio 에서 name 을 동일하게 주면 그룹으로 묶여서 1개만 선택하게 된다. -->
+            <!-- radio에서 name을 동일하게 주면 그룹으로 묶어서 1개만 선택하게 된다. -->
             <ul>
                 <li><label><input type="radio" name="gift" value="yes">선물 포장</label></li>
                 <li><label><input type="radio" name="gift" value="no">선물 포장 안 함</label></li>
@@ -38,7 +38,7 @@
         </fieldset>
         <fieldset>
             <legend>배송 정보</legend>
-            <ui id="shipping">
+            <ul id="shipping">
                 <li>
                     <label for="user-name">이름</label>
                     <input type="text" id="user-name">
@@ -55,10 +55,8 @@
                     <label for="phone">연락처</label>
                     <input type="tel" id="phone">
                 </li>
-            </ui>
+            </ul>
         </fieldset>
-
     </form>
-
 </body>
 </html>
