@@ -16,7 +16,9 @@ th,td{
     padding: 10px 20px;
 }
 #description{
-    border: 1px dotted #222;
+    border-style: solid;
+    border-top: 0.5px dotted #222; /* 위쪽 점선 */
+    border-bottom: 0.5px dotted #222; /* 아래쪽 점선 */
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
     margin: 30px;
@@ -30,7 +32,8 @@ th,td{
 #package{
     margin: 30px;
     padding: 20px 20px 20px 15px;
-    border: 1px dotted #222;
+    border-style: dotted;
+    border-bottom: 0.5px solid #222;
     border-bottom-left-radius: 5%;
     border-bottom-right-radius: 5%;
 }
