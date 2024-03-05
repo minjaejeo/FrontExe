@@ -54,7 +54,7 @@ body {
 }
 
 #signup input[type=text], #signup input[type=password],
-#singup input[type=tel], #signup input[type=email]{
+#signup input[type=tel], #signup input[type=email]{
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	font-size: 13px;
@@ -65,6 +65,6 @@ body {
 #signup input[required]{
 	border: 1px solid red;
 }
-#signup input[read-only]{
+#signup input[readnoly]{
 	border: none;
 }
