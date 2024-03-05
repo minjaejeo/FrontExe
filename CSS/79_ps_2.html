@@ -26,16 +26,16 @@
             padding: 10px;
         }
         /*
-        : link - 방문하지 않는 링크 스타일 적용
-        : visited - 방문한 링크 스타일 적용
-        : hover - 마우스 위에 있을 때 스타일 적용
-        : active - 활성화, 즉 클릭했을 때
-        : focus - 초점이 맞추어졌을때
+        :link - 방문하지 않는 링크 스타일 적용
+        :visited - 방문한 링크 스타일 적용
+        :hover - 마우스 위에 있을 때 스타일 적용
+        :active - 활성화, 즉 클릭했을 때
+        :focus - 초점이 맞추어졌을 때
 
-        순서는 다음과 같이 정의한다.
-        순서가 바뀌면 스타일이 제대로 적용되지 않는다.
+        순서는 다음과 같이 정의한다
+        순서가 바뀌면 스타일이 제대로 적용되지 않는다
         LoVe HAte
-        : link, : visited, :hover, :active
+        :link, :visited, :hover, :active
         */
         .navi a:link, .navi a:visited{
             display: block;
@@ -54,12 +54,11 @@
         }
         .contents{
             margin: 30px auto;
-            width: 400px;
-            padding: 20px;
-            border: 1px solid #222;
-            border-radius: 5px;
+            width:400px;
+            padding:20px;
+            border:1px solid #222;
+            border-radius:5px;
         }
-
         #signup{
             background: #fff;
             border: 1px solid #222;
@@ -72,17 +71,18 @@
             border: 1px solid #ccc;
             margin-bottom: 30px;
         }
-        #signup legend{
+        #singup legend{
             font-size: 16px;
             font-weight: bold;
             padding-left: 5px;
             padding-bottom: 10px;
         }
-        #signup ul li{
+        #singup ul li{
             line-height: 30px;
             list-style: none;
             padding: 5px 10px;
             margin-bottom: 2px;
+
         }
         /*signup의 자손 중에 fieldset중에 첫번째 요소, 그리고 다시 그 자손인 label요소*/
         #signup fieldset:first-of-type label{
@@ -96,11 +96,11 @@
             padding: 5px;
             width: 200px;
         }
-        /* radio를 제외한 다른 input에 마우스를 올려놓았을 때*/
-        #signup input:not([type=radui]):hover{
+        /*radio 를 제외한 다른 input에 마우스를 올려놓았을때*/
+        #signup input:not([type=radio]):hover{
             border-color: #f00;
         }
-        /* input 에 checked 속성이 추가되었을 때 label요소의 스타일*/
+        /*input에 checked 속성이 추가되었을 떄 label 요소의 스타일*/
         #signup input:checked + label{
             color: red;
             font-weight: bold;
@@ -109,15 +109,15 @@
             border: 1px solid #222;
             border-radius: 20px;
             display: block;
-            font: 16px 맑은 고딕, 굴립, 돋음;
+            font: 16px 맑은 고딕, 굴림, 돋음;
             letter-spacing: 1px;
             margin: auto;
             padding: 7px 25px;
         }
         #signup b{
-            float: left;
+            float:left;
             font-size: 13px;
-            width: 110px;
+            width:110px;
         }
     </style>
 </head>
