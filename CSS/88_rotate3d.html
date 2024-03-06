@@ -7,36 +7,47 @@
     <style>
         #container{
             width: 800px;
+            height: 200px;
             margin: 20px auto;
-
         }
         .origin{
             width: 100px;
             height: 100px;
-            margin: 40px;
-            float: left;
             border: 1px solid black;
-            perspective: 200px; /*원근감추가*/
+            float: left;
+            margin: 40px;
+            perspective: 200px; /*원근감 주기*/
         }
-        .orgin > div{
+        .origin > div { 
             width: 100px;
             height: 100px;
             background-color: orange;
             transition: all 3s; /*3초 동안 회전하도록 트랜지션 적용*/
         }
-        #rotatex:hover{transform:rotateX(55deg)}
-        #rotatey:hover{transform:rotateY(55deg)}
-        #rotatez:hover{transform:rotateZ(55deg)}
-        #rotatexyz:hover{transform:rotate3d(2.5, 1.2, -1.5, 55deg)}/* x, y, z축의 방향 벡터, 회전 각도*/
+        #rotatex:hover{
+            transform: rotateX(55deg);
+        }
+        #rotatey:hover{
+            transform: rotateY(55deg);
+        }
+        #rotatez:hover{
+            transform: rotateZ(55deg);
+        }
+        #rotatexyz:hover{
+            transform: rotate3d(2.5, 1.2, -1.5, 55deg);/*x,y,z축의 방향 벡터, 회전각*/
+        }
     </style>
 </head>
 <body>
     <div id="container">
-        <div class="orgin">
+        <div class="origin">
             <div id="rotatex"></div>
         </div>
         <div class="origin">
             <div id="rotatey"></div>
+        </div>
+        <div class="origin">
+            <div id="rotatez"></div>
         </div>
         <div class="origin">
             <div id="rotatexyz"></div>
