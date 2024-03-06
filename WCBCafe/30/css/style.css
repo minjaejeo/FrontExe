@@ -173,7 +173,7 @@ aside{
 
 .post-date span{
     font-size: 1rem;
-    border-top: 1px rgba(255, 255, 255, .0) solid;  /*날짜위의 반투명 수평선*/
+    border-top: 1px rgba(255, 255, 255, .5) solid;  /*날짜위의 반투명 수평선*/
     padding-top: 6px;
     display: block;
     width: 60%;
