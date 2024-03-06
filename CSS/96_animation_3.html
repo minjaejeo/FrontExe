@@ -9,22 +9,30 @@
             width: 100px;
             height: 100px;
             margin: 60px auto;
-            background-color: red;
-            /* background-image: url('../images/cat.jpg');
-            background-repeat: no-repeat;
-            background-size: cover; */
-            animation: rotate 1.5s infinite background 1.5s infinite alternate;
+            animation: rotate 1.5s infinite, background 1.5s infinite alternate;
         }
-        @keyframes rotate{
-            from{ transform:perspective(120px) rotateX(0deg) rotateY(0deg);}
-            50%{transform:perspective(120px) rotateX(-180deg) rotateY(0deg);}
-            to{transform:perspective(120px) rotateX(-180deg) rotateY(-180deg);}
 
+        @keyframes rotate{
+            from{
+                transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+            }
+            50%{
+                transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+            }
+            to{
+                transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+            }
         }
         @keyframes background{
-            from{ background-color: red;}
-            50%{ background-color: yellow;}
-            to{background-color: blue;}
+            from{
+                background-color: red;
+            }
+            50%{
+                background-color: yellow;
+            }
+            to{
+                background-color: blue;
+            }
         }
     </style>
 </head>
