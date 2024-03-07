@@ -32,7 +32,7 @@
                 let $imageContainer = document.querySelector('.image-container');
                 let len = $imageContainer.children.length;
                 for(let i=0;i<len;i++){
-                    let $img = $imageContainer.children[i];
+                    let $img = $imageContainer.children[len-i-1];
                     let left = initX + (i*offsetX);
                     $img.style.left = left + 'px';
                     $img.style.top = initY + 'px';
