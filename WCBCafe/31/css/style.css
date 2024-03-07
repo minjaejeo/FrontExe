@@ -183,13 +183,12 @@ aside{
 .post-title{
     font-family: "나눔명조", nanummyeongjo, serif;
     font-size: 1.6rem;
-    font-weight:bold;
+    font-weight: bold;
 
 }
 .post-title, .post-cat{
     margin-left: 120px;
 }
-
 article img{
     margin-bottom: 20px;
 }
