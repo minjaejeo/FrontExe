@@ -8,29 +8,26 @@
         #wrapper{
             display: grid;
             grid-template-columns: repeat(3, 200px);
-            grid-template-rows: minmax(100px, auto);
-            grid-gap: 20px 30px;    /* 줄 간격, 컬럼 간격*/
+            grid-template-rows: minmax(100px, auto); /* 줄 높이 최소 100px */
+            grid-gap: 20px 110px;    /* 줄 간격, 컬럼 간격 */
+            
         }
         .items{
             padding: 15px;
             background-color: #eee;
         }
-        /* .items:nth-child(odd){
-            background-color: #bbb;
-        } */
-        .items:nth-child(2n+1){
+        .items:nth-child(odd){
             background-color: #bbb;
         }
     </style>
 </head>
 <body>
     <div id="wrapper">
-        <div class="items">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</div>
-        <div class="items">Lorem ipsum dolor sit amet, consectetuer adipiscing </div>
-        <div class="items">Lorem ipsum dolor sit amet, consectetuer </div>
-        <div class="items">Lorem ipsum dolor sit amet </div>
-        <div class="items">Lorem ipsum dolor sit</div>
-        <div class="items">Lorem ipsum</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+        <div class="items">Lorem ipsum dolor sit amet</div>
     </div>
 </body>
 </html>
