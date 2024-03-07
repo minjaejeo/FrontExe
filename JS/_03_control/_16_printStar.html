@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        3을 입력하면
+        *
+        **
+        ***
+
+        5을 입력
+        *
+        **
+        ***
+        ****
+        *****
+        */
+        const star = prompt("Enter a number: ")
+        let i, j;
+
+        for(i=1; i<=star; i++){
+            let row = '';
+            for(j =1 ; j<= i; j++){
+                row+='*';
+            }
+            console.log(row);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
