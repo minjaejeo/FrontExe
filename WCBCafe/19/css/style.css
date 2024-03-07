@@ -112,10 +112,8 @@ img{
 #home .page-title{
     text-transform: none;
 }
-
-/* NEWS
---------------------------------------- */
-
+/* NEWS 
+-------------------------------*/
 #news{
     background-image: url('../../../siteimages/news-bg.jpg');
     height: 270px;

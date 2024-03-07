@@ -84,7 +84,7 @@ img{
 .button:hover{
     background: #0090aa;
 }
-/* 큰배경이미지 */
+/* 큰 배경 이미지 */
 .big-bg{
     background-size: cover;
     background-position: center top;
@@ -93,14 +93,14 @@ img{
 #home{
     background-image: url('../../../siteimages/main-bg.jpg');
     min-height: 100vh;
-
-    /* 배경 이미지와 색상 블렌딩
-    background-color: #393;
+    
+    /*배경 이미지와 색상 블렌딩*/
+    /* background-color: #393;
     background-blend-mode: hard-light; */
 
     /* 그레디언트 색상 */
-    /* 위의 이미지를 그레디언트로 덮었다. */
-    background-image: linear-gradient(#c9ffbf, #ffafbd);
+    /* 위의 이미지를 그레디언트로 덮었다 */
+    background-image: linear-gradient(#c9ffbf , #ffafbd);
 }
 #home .page-title{
     text-transform: none;
