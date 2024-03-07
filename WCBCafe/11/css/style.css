@@ -53,18 +53,16 @@ img{
     margin: 0 auto; /* 좌우의 중앙에 배치*/
     padding: 0 4%; /* 스마트폰에서 잘 보이도록 여백 지정 */
 }
-
 /* HOME
-------------------------------------------*/
+----------------------------------------*/
 .home-content{
     text-align: center;
     margin-top: 10%;
 }
-.home-content p{
-    font-size: 1.125rem; 
+.home-content p {
+    font-size: 1.125rem;
     margin: 10px 0 42px;
 }
-
 /* 제목 */
 .page-title{
     font-size: 5rem;
@@ -72,8 +70,7 @@ img{
     text-transform: uppercase;
     font-weight: normal;
 }
-
-/* 버튼*/
+/* 버튼 */
 .button{
     font-size: 1.375rem;
     background: #0bd;
