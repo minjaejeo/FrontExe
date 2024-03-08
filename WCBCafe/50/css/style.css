@@ -231,7 +231,7 @@ aside p{
 }
 
 /* MENU
----------------------------------------- */
+------------------------------------------------*/
 #menu{
     background-image: url('../../../siteimages/menu-bg.jpg');
     min-height: 100vh;
@@ -249,18 +249,17 @@ aside p{
 }
 
 /* MENU grid
---------------------------------------------- */
+--------------------------------------------------------*/
 
 .grid{
     display: grid;
     gap: 26px;
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    /* grid-template-columns: repeat(3, 1fr); */
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
     margin-top: 6%;
     margin-bottom: 50px;
 }
-
 .big-box{
     grid-column: 1/3;
     grid-row: 1/3;
@@ -333,10 +332,8 @@ aside p{
     .post-cat{
         margin-left: 80px;
     }
-
-    /* MENU */
+    /*MENU*/
     .menu-content{
         margin-top: 20%;
     }
-
 }

@@ -197,18 +197,17 @@ article p{
     margin-bottom: 1rem;
 }
 
-/*사이드바
--------------------------------*/
+/* 사이드바
+---------------------------------------*/
 .sub-title{
     font-size: 1.375rem;
     padding: 0 8px 8px;
-    border-bottom: 2px #0bd solid;  /* 아래에 선을 설정*/
+    border-bottom: 2px #0bd solid;  /* 아래에 선을 설정 */
     font-weight: normal;
 }
 aside p{
     padding: 12px 10px;
 }
-
 .sub-menu{
     margin-bottom: 60px;
     list-style: none;
@@ -219,7 +218,7 @@ aside p{
 .sub-menu a{
     color: #432;
     padding: 10px;
-    display: block; /* 링크로 클릭할 수 있는 범위를 넓혀줌 */
+    display: block;/*링크로 클릭할 수 있는 범위를 넓혀줌 */
 }
 .sub-menu a:hover{
     color: #0bd;
@@ -227,19 +226,18 @@ aside p{
 
 /* 0~600px 사이의 화면일 때 적용 */
 @media(max-width: 600px){
-
-    /* 1) 모바일 화면에서 문자크기와 여백 조정*/
+    
+    /*1) 모바일 화면에서 문자크기와 여백 조정 */
     .page-title{
         font-size: 2.5rem;
     }
-
-    /*2) 헤더의 로고와 nav메뉴를 수직으로 정렬*/
+    
+    /* 2) */
     .page-header{
         flex-direction: column;
         align-items: center;
     }
-
-    /* 1) 모바일 화면에서 문자크기와 여백 조정*/
+    /*1) 모바일 화면에서 문자크기와 여백 조정 */
     /* HEADER */
     .main-nav{
         font-size: 1rem;
@@ -248,7 +246,6 @@ aside p{
     .main-nav li{
         margin: 0 20px;
     }
-    
     /* HOME */
     .home-content{
         margin-top: 20%;

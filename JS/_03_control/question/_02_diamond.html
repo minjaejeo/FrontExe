@@ -17,30 +17,28 @@
   ***
    *
 */
-        const num = Number(prompt('숫자 입력', 0));
+        let num = Number(prompt('숫자입력', 7));
+        let output = '';
 
-        for(let i = 1;i<=num/2; i++){
-            for(let k = num/2 - i ;k>0;k--){
-                document.write('&nbsp;');
+        let mid_pos = parseInt(num/2);
+        console.log('mid_pos=' + mid_pos);
+
+        let w_star = 0; //별찍기 범위
+        for(let i=0;i<num;i++){
+            for(let j=0;j<num;j++){
+                if(j>=mid_pos-w_star && j<=mid_pos + w_star)
+                    output += '*';
+                else   
+                    output += ' ';
             }
-            for(let j=0;j<(2*i - 1); j++){
-                document.write('*');
-            }
-            document.write('<br>');
+            if(i<mid_pos)
+                w_star++;
+            else
+                w_star--;
+
+            output += '\n';
         }
-        for (let i = num/2 - 1; i >= 1; i--) {
-            // 왼쪽 공백 출력
-            for (let k = num / 2 - i; k > 0; k--) {
-                document.write('&nbsp;');
-            }
-
-            // 별 출력
-            for (let j = 2 * i - 1; j >0; j--) {
-                document.write('*');
-            }
-
-            document.write('<br>');
-        }
+        console.log(output)
     </script>
 </head>
 <body>
