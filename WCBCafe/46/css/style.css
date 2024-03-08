@@ -231,7 +231,7 @@ aside p{
 }
 
 /* MENU
----------------------------------------- */
+------------------------------------------------*/
 #menu{
     background-image: url('../../../siteimages/menu-bg.jpg');
     min-height: 100vh;
@@ -247,7 +247,6 @@ aside p{
     font-size: 1.125rem;
     margin: 10px 0 0;
 }
-
 
 /* 0~600px 사이의 화면일 때 적용 */
 @media(max-width: 600px){
@@ -316,10 +315,8 @@ aside p{
     .post-cat{
         margin-left: 80px;
     }
-
-    /* MENU */
+    /*MENU*/
     .menu-content{
         margin-top: 20%;
     }
-
 }
