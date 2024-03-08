@@ -146,11 +146,11 @@ footer p{
 
 /* news-contents의 메인기사와 사이드바의 크기 설정 */
 article{
-    order: 2;   /*display:flex에서 작동하는 속성, 배치 순서*/
+    order: 2; /* display:flex에서 동작하는 속정, 배치 순서 */
     width: 60%;
 }
 aside{
-    order: 3;
+    order: 4;
     width: 22%;
 }
 .ad{
