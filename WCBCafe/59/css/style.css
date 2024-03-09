@@ -278,7 +278,6 @@ aside p{
     background-image: url('../../../siteimages/contact-bg.jpg');
     min-height: 100vh;
 }
-
 /* form 양식 */
 form div{
     margin-bottom: 14px;
@@ -291,7 +290,7 @@ label{
 input[type='text'],
 input[type='email'],
 textarea{
-    background: rgba(255,255,255,.5);
+    background: rgba(255, 255, 255, .5);
     border: 1px #fff solid;
     border-radius: 5px;
     padding: 10px;
@@ -404,5 +403,4 @@ input[type='submit']{
     textarea{
         max-width: 100%;
     }
-
 }

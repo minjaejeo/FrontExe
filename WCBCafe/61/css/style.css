@@ -321,7 +321,7 @@ input[type='submit']{
     display: flex;
     justify-content: space-between;
 }
-.location-info{
+.loaction-info{
     width: 22%;
 }
 .location-info p{
@@ -330,7 +330,6 @@ input[type='submit']{
 .location-map{
     width: 74%;
 }
-
 /* 0~600px 사이의 화면일 때 적용 */
 @media(max-width: 600px){
 
