@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        let i = 0;
-        while(i < 10){
+
+        var i = 10;
+
+        // for 문의 i는 전역변수이므로 위의 10의 값을 덮어써버린다.
+        for(var i=0;i<5;i++){
             console.log(i);
-            i++;
         }
+
+        console.log('i=' + i);
+        
     </script>
 </head>
 <body>

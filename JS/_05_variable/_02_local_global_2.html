@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        let i = 0;
-        while(i < 10){
-            console.log(i);
-            i++;
+        var n = '홍길동';    // 전역변수 
+
+        function test(){
+            // 함수를 벗어나는 순간 사라진다.
+            var n = '임꺽정';   // 지역변수
+            
         }
+        console.log(n); // 홍길동
     </script>
 </head>
 <body>

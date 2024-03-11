@@ -4,71 +4,50 @@
 클릭한 횟수가 상자위에 출력될 것
 5초가 지나면 더 이상 클릭횟수 증가하지 않음.
  -->
- <!DOCTYPE html>
- <html lang="en">
- 
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
-     <style>
-         #panel {
-             width: 600px;
-             height: 300px;
-             border: 1px solid #999;
-             position: relative;
-         }
- 
-         #bar {
-             position: absolute;
-             left: 50px;
-             top: 190px;
-             width: 500px;
-             height: 20px;
-             background: #f30;
-         }
- 
-         #fish {
-             position: absolute;
-             left: 50px;
-             top: 120px;
-         }
- 
-         #nav {
-             margin-top: 20px;
-             text-align: center;
-             width: 600px;
-         }
-     </style>
-     <script>
-         document.addEventListener('DOMContentLoaded', () => {
-             let $buttonMove = document.querySelector('#btnMove');
-             let $counter = document.querySelector('#counter');
-             let clickCount = 0;
- 
-             $buttonMove.addEventListener('click', () => {
-                 clickCount++; // 클릭할 때마다 횟수 증가
-                 $counter.textContent = clickCount; // 횟수 출력
-             });
- 
-             // 5초 후에 클릭 비활성화
-             setTimeout(() => {
-                 $buttonMove.removeEventListener('click', clickHandler);
-                 $buttonMove.disabled = true;
-             }, 5000);
-         });
-     </script>
- </head>
- 
- <body>
-     <div id="panel">
-         <img src="../../images2/fish1.png" id="fish" alt="">
-         <div id="bar"></div>
-     </div>
-     <div id="nav">
-         <button id="btnMove">움직임</button>
-         <p>클릭 횟수: <span id="counter">0</span></p>
-     </div>
- </body>
- 
- </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .panel{
+            width: 600px;
+            height: 400px;
+            border: 2px solid black;
+            position: relative;
+        }
+        .panel #fish{
+            position: absolute;
+            left: 250px;
+            top: 150px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let count = 0;
+            const INTERVAL = 5000;
+            let isPlaying = true;
+            let $score = document.querySelector('#score');
+            let $fish = document.querySelector('#fish');
+
+            $fish.addEventListener('click', () => {
+                if(isPlaying){
+                    $score.textContent = ++count;
+                }
+            });
+
+            setTimeout(() => {
+                isPlaying = false;
+                alert('게임이 종료되었습니다.');
+            }, INTERVAL);
+        });
+    </script>
+</head>
+<body>
+    <div>현재 점수 <span id="score">0</span></div>
+    <div class="panel">
+        <img src="../../../images2/fish.png" id="fish" alt="">
+    </div>
+</body>
+</html>

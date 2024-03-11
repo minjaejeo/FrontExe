@@ -6,8 +6,8 @@ move_fish에서 button을 2개 생성
 '시작' 버튼을 누르면 물고기가 자동으로 왕복 움직이도록
 '멈춤' 버튼을 누르면 물고기가 멈추도록
  -->
- <!DOCTYPE html>
-<html lang="ko">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -21,61 +21,64 @@ move_fish에서 button을 2개 생성
             position: relative;
         }
 
-        #bar {
+        #bar{
             position: absolute;
             left: 50px;
             top: 190px;
             width: 500px;
             height: 20px;
-            background: #f30;
+            background-color: #f30;
         }
-
-        #fish {
+        #fish{
             position: absolute;
             left: 50px;
             top: 120px;
-            width: 50px;
-            height: auto;
         }
-
-        #nav {
+        #nav{
             margin-top: 20px;
             text-align: center;
             width: 600px;
         }
     </style>
     <script>
-       document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {
             let $fish = document.querySelector('#fish');
-            let $buttonStart = document.querySelector('#btnStart');
-            let $buttonStop = document.querySelector('#btnStop');
-            let intervalId;
-            const MOVE_VAL = 5; // 부드러운 움직임을 위해 조절
-            const MAX_X = 430;
-            const MIN_X = 50;
-            let direction = 1; // 방향 변수 추가 (1: 우측, -1: 좌측)
+            const step_val = 50;
+            let step = step_val;
+            const max_x = 430;
+            const min_x = 50;
+            let timerID = null;
+            const INTERVAL = 100;
 
-            $buttonStart.addEventListener('click', () => {
-                // 이전 interval을 지우고 중복 실행을 방지
-                clearInterval(intervalId);
+            let $btnStart = document.querySelector('#btnStart');
+            let $btnStop = document.querySelector('#btnStop');
 
-                intervalId = setInterval(() => {
-                    let x = $fish.getBoundingClientRect().left;
+            $btnStart.addEventListener('click', ()=>{
+                // 타이머가 작동하면 추가로 동작하지 못하도록
+                if(timerID !== null)
+                    return;
+                timerID = setInterval(() => {
+                    let x = $fish.getBoundingClientRect().left + step;
 
-                    if ((x >= MAX_X && direction === 1) || (x <= MIN_X && direction === -1)) {
-                        // 방향을 반대로 바꿈
-                        direction *= -1;
-                        // 이미지 변경
-                        $fish.setAttribute('src', direction === 1 ? '../../../images2/fish2.png' : '../../../images2/fish1.png');
+                    if(x >= max_x){
+                        x=max_x;
+                        $fish.setAttribute('src', '../../../images2/fish2.png');
+                        step = -step_val;
+                    }else if(x<min_x){
+                        x = min_x;
+                        $fish.setAttribute('src', '../../../images2/fish1.png');
+                        step = step_val;
                     }
 
-
-                    $fish.style.left = x + MOVE_VAL * direction + 'px';
-                }, 100); // 부드러운 움직임을 위해 interval 시간을 조절
+                    $fish.style.left = x + 'px';
+                }, INTERVAL);
             });
-
-            $buttonStop.addEventListener('click', () => {
-                clearInterval(intervalId);
+            $btnStop.addEventListener('click', ()=>{
+                // 타이머가 동작하지 않는다면 멈출 필요없다.
+                if(timerID === null)
+                    return;
+                clearInterval(timerID);
+                timerID = null;
             });
         });
     </script>
@@ -83,10 +86,10 @@ move_fish에서 button을 2개 생성
 
 <body>
     <div id="panel">
-        <img src="../../../images2/fish1.png" id="fish" alt="">
+        <img src="../../../images2/fish.png" id="fish" alt="">
         <div id="bar"></div>
     </div>
-    <div id="nav">
+    <div id="nav"></div>
         <button id="btnStart">시작</button>
         <button id="btnStop">멈춤</button>
     </div>

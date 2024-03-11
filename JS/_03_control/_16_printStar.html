@@ -19,15 +19,13 @@
         ****
         *****
         */
-        const star = prompt("Enter a number: ")
-        let i, j;
 
-        for(i=1; i<=star; i++){
-            let row = '';
-            for(j =1 ; j<= i; j++){
-                row+='*';
-            }
-            console.log(row);
+        const num = Number(prompt('숫자 입력', 0));
+
+        for(let i =1;i<=num;i++){
+            for(let j=0;j<i;j++)
+                document.write('*');
+            document.write('<br>');
         }
     </script>
 </head>

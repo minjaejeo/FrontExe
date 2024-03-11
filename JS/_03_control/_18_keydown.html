@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            document.addEventListener('keydown', function (e) {
+            document.addEventListener('keydown', function(e){
                 console.log('입력 키 코드: ' + e.keyCode);
-                switch (e.keyCode) {
+                switch(e.keyCode){
                     case 37:
                         console.log('방향키 좌 입력');
                         break;
@@ -23,13 +22,11 @@
                         console.log('방향키 하 입력');
                         break;
                 }
-            });
+            } );
         });
     </script>
 </head>
-
 <body>
-
+    
 </body>
-
 </html>

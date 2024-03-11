@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        let i = 0;
-        while(i < 10){
-            console.log(i);
-            i++;
+        function test(){
+            var n = '홍길동';
         }
+
+        // Uncaught ReferenceError: n is not defined
+        console.log(n); 
     </script>
 </head>
 <body>
