@@ -1,8 +1,9 @@
 <!-- 
 물고기를 상자에 띄우고
-물고기를 5초안에 최대한 클릭할 것
+물고기를 10초안에 최대한 클릭할 것
 클릭한 횟수가 상자위에 출력될 것
-5초가 지나면 더 이상 클릭횟수 증가하지 않음.
+10초가 지나면 더 이상 클릭횟수 증가하지 않음.
+물고기는 0.7초마다 위치를 옮겨다닐 것
  -->
  <!DOCTYPE html>
  <html lang="en">
@@ -22,25 +23,64 @@
              left: 250px;
              top: 150px;
          }
+         #gameover{
+            text-align: center;
+            vertical-align: middle;
+            font-weight: bold;
+            font-size: 5rem;
+            color: #fff;
+            text-shadow: 5px 5px 4px rgb(0, 255, 0);
+            opacity: 0;
+         }
      </style>
      <script>
          document.addEventListener('DOMContentLoaded', () => {
              let count = 0;
-             const INTERVAL = 5000;
-             let isPlaying = true;
+             const INTERVAL = 700;  //0.7초 만큼 멈춰있다가 이동
+             const TIME_OUT = 5000; // 총 게임 시간 5초
+             const MAX_X = 600 - 120;   // 물고기 너비만큼 빼줌
+             const MAX_Y = 400 - 70;    // 물고기 높이만큼 뺴줌
+             let isPlaying = true;  
+             let timerID = null;
              let $score = document.querySelector('#score');
              let $fish = document.querySelector('#fish');
+             let $gameover = document.querySelector('#gameover');
  
              $fish.addEventListener('click', () => {
                  if(isPlaying){
                      $score.textContent = ++count;
                  }
              });
+             timerID = setInterval(() => {
+                let x = parseInt(Math.random() * MAX_X);
+                let y = parseInt(Math.random() * MAX_Y);
+
+                $fish.style.left = x + 'px';
+                $fish.style.top = y + 'px';
+             }, INTERVAL);
  
              setTimeout(() => {
                  isPlaying = false;
-                 alert('게임이 종료되었습니다.');
-             }, INTERVAL);
+                 clearInterval(timerID);
+                 showEndTitle();
+                //  alert('게임이 종료되었습니다.');
+             }, TIME_OUT);
+
+             function showEndTitle(){
+                $gameover.animate(
+                    {
+                        opacity:[
+                            0.0,    // 시작 값
+                            1.0 // 종료 값
+                        ]
+                    },
+                    {
+                        duration: 1500, // 밀리초 지정
+                        fill: 'forwards',   // 종료 시 속성을 지님
+                        easing: 'ease'  // 가속도 종류
+                    }
+                )
+             }
          });
      </script>
  </head>
@@ -48,6 +88,7 @@
      <div>현재 점수 <span id="score">0</span></div>
      <div class="panel">
          <img src="../../../images2/fish.png" id="fish" alt="">
+         <p id="gameover">The End</p>
      </div>
  </body>
  </html>
