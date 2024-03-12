@@ -24,6 +24,27 @@
         05,1143.1,1099.45,1267,37
         06,1141.5,1091.33,1261,37
         `;
+
+        input = input.trim();   // 양쪽 공백 문자 제거
+        input = input.split('\n');  // \n기준으로 잘라서 배열
+        console.log(input);
+
+        input = input.map((line) => line.split(','))
+        newInput = []
+        input.forEach(function(line){
+            // console.log('line= ' + typeof line);
+            let temp = [];
+            line.forEach(function(elem){
+                // console.log('elem= ' + typeof elem);
+                elem = elem.trim(); 
+                temp.push(elem);
+            });
+            newInput.push(temp)
+        });
+        console.log(newInput);
+
+        const jsonStr = JSON.stringify(newInput);
+        console.log(jsonStr);
     </script>
 </head>
 
