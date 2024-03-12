@@ -30,7 +30,19 @@
         console.log(input);
 
         input = input.map((line) => line.split(','))
-        newInput = []
+
+        // map을 사용해서 각 배열 요소의 공백 문자 제거
+        input = input.map(function(line){
+            return line = line.map(function(elem){
+                return elem.trim();
+            });
+        });
+
+        console.log(input);
+        /*
+
+        // forEach를 사용해서 각 배열 요소의 공백 문자 제거
+        let newInput = []
         input.forEach(function(line){
             // console.log('line= ' + typeof line);
             let temp = [];
@@ -45,6 +57,7 @@
 
         const jsonStr = JSON.stringify(newInput);
         console.log(jsonStr);
+        */
     </script>
 </head>
 
