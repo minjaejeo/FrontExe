@@ -8,19 +8,17 @@ move_fish에서 button을 2개 생성
  -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #panel {
+        #panel{
             width: 600px;
             height: 300px;
             border: 1px solid #999;
             position: relative;
         }
-
         #bar{
             position: absolute;
             left: 50px;
@@ -53,7 +51,7 @@ move_fish에서 button을 2개 생성
             let $btnStart = document.querySelector('#btnStart');
             let $btnStop = document.querySelector('#btnStop');
 
-            $btnStart.addEventListener('click', ()=>{
+            $btnStart.addEventListener('click', () => {
                 // 타이머가 작동하면 추가로 동작하지 못하도록
                 if(timerID !== null)
                     return;
@@ -61,38 +59,36 @@ move_fish에서 button을 2개 생성
                     let x = $fish.getBoundingClientRect().left + step;
 
                     if(x >= max_x){
-                        x=max_x;
+                        x = max_x;
                         $fish.setAttribute('src', '../../../images2/fish2.png');
                         step = -step_val;
-                    }else if(x<min_x){
+                    }else if(x < min_x){
                         x = min_x;
                         $fish.setAttribute('src', '../../../images2/fish1.png');
                         step = step_val;
                     }
-
                     $fish.style.left = x + 'px';
                 }, INTERVAL);
             });
-            $btnStop.addEventListener('click', ()=>{
+            $btnStop.addEventListener('click', () =>{
                 // 타이머가 동작하지 않는다면 멈출 필요없다.
                 if(timerID === null)
                     return;
+
                 clearInterval(timerID);
                 timerID = null;
             });
         });
     </script>
 </head>
-
 <body>
     <div id="panel">
         <img src="../../../images2/fish.png" id="fish" alt="">
         <div id="bar"></div>
     </div>
-    <div id="nav"></div>
+    <div id="nav">
         <button id="btnStart">시작</button>
         <button id="btnStop">멈춤</button>
     </div>
 </body>
-
 </html>
