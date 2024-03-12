@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function callThreeTimes(callback){
+        function callThreeTimes(callfront){
             for(let i=0;i<3;i++)
-                callback(i);
+                callfront(i);
         }
         // 익명 함수로 callback 호출하기
         callThreeTimes(function(i){

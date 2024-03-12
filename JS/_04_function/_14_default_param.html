@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function isLeapYear(year=new Date().getFullYear()){
+        function isLeapYear(year = new Date().getFullYear()){
             console.log(`매개변수 year : ${year}`);
-            return (year %4===0) && (year %100 !==0) || (year %400 ===0)
+            return (year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)
         }
+
         console.log(`올해는 윤년일까? === ${isLeapYear()}`);
+
+        console.log(true && false);
+        console.log(true && true);
+        console.log(true && false || false);
+        
     </script>
 </head>
 <body>

@@ -8,17 +8,16 @@
         const numbers = [273, 52, 103, 32, 47];
 
         numbers.forEach(function(value, index, array){
-            console.log(`${index}번째 요소: ${value}`);
+            console.log(`${index}번째 요소 : ${value} ${array}`);
         });
 
         function forEach(array, callback){
-            for(let i=0; i<array.length;i++){
+            for(let i=0;i<array.length;i++){
                 callback(array[i], i, array);
             }
         }
-
         forEach(numbers, function(value, index, array){
-            console.log(`${index}번째 요소: ${value}`);
+            console.log(`${index}번쨰 요소: ${value}`);
         });
     </script>
 </head>
