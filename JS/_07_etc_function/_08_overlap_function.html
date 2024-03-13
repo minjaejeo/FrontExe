@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        let a=10, b=20, c=30;
+        let a=10; b=20; c=30;
 
         let outer_func = function(){
             let b=200, c=300;
@@ -13,10 +13,9 @@
             let inner_func = function(){
                 let c = 3000;
                 console.log('a=' + a);
-                console.log('b=' + b);
-                console.log('c=' + c);
+                console.log('b='+ b);
+                console.log('c='+ c);
             }
-
             inner_func();
         }
         outer_func();
