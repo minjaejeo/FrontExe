@@ -12,13 +12,13 @@
         foods와 foodArray는 모두 동일한 객체를 가리키게 된다.
         그래서 아래와 같은 결과가 나온다.
         */
-        const foodArray = ['우유', '식빵'];
-        const foods = foodArray;    // 참조값이 복사되었다.
-        foodArray.push('라면');
-        foods.push('바나나');
+       const foodArray = ['우유', '식빵'];
+       const foods = foodArray; // 참조값이 복사되었다.
+       foodArray.push('라면');
+       foods.push('바나나');
 
-        console.log(foodArray);
-        console.log(foods);
+       console.log(foodArray);
+       console.log(foods);
     </script>
 </head>
 <body>
