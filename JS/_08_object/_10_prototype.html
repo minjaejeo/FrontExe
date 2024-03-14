@@ -10,10 +10,10 @@
         console.log(a.sample);
         console.log('');
 
-        const b = new Number(200);
+        const b = new Number(200);  
         console.log(b.sample);  // undefined
 
-        // Number객체 자료형 변수가 모두 공유하고 싶은 값은
+        // Number 객체 자료형 변수가 모두 공유하고 싶은 값은
         // prototype에 설정하면 된다.
         Number.prototype.pi = 3.14;
 
@@ -22,7 +22,6 @@
 
         const i = 99;
         console.log(i.pi);  // number -> Number
-        
     </script>
 </head>
 <body>
