@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () =>{
             const divA = document.querySelector('#first');
             const divB = document.querySelector('#second');
             const h1 = document.createElement('h1');
@@ -15,12 +15,12 @@
                 divA.appendChild(h1);
                 setTimeout(toSecond, 1000); // 1초 후
             }
-            const toSecond = () => {
-                divA.appendChild(h1);
-                setTimeout(toFirst, 3000); // 10초 후
+            const toSecond = () =>{
+                divB.appendChild(h1);
+                setTimeout(toFirst, 3000);  // 3초 후
             }
-            
-            toFirst();
+
+            toFirst();  
         });
     </script>
 </head>
@@ -32,5 +32,6 @@
     <div id="second">
         <h1>두 번째 div 태그 내부</h1>
     </div>
+
 </body>
 </html>
