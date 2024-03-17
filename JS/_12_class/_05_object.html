@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-
         const createStudent = function(name, kor, eng, math, sci){
             return{
                 // Field(Property) - 필드, 속성, 멤버변수
@@ -16,22 +14,20 @@
                 math: math,
                 sci: sci,
 
-                // Method   - 메서드, 멤버함수
+                // Method - 메서드, 멤버함수
                 getSum(){
                     return this.kor + this.eng + this.math + this.sci;
                 },
-
                 getAverage(){
                     return this.getSum()/4;
                 },
                 toString(){
-                    return `${this.name}\t${this.getSum()}점\t${this.getAverage()}점\n`;
+                    return`${this.name}\t${this.getSum()}점\t${this.getAverage()}점\n`;
                 }
             }
         }
-        
         const students = [];
-        students.push(createStudent('홍길동', 74, 88, 90, 80));
+        students.push(createStudent('홍길동', 74, 88 ,90, 80));
         students.push(createStudent('임꺽정', 55, 35, 89, 98));
         students.push(createStudent('장길산', 37, 77, 56, 78));
         students.push(createStudent('일지매', 90, 99, 78, 97));
@@ -43,9 +39,7 @@
         console.log(output);
     </script>
 </head>
-
 <body>
-
+    
 </body>
-
 </html>

@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', ()=>{
             let [timer, timerId] = [0, 0];
             const h1 = document.querySelector('h1');
             const checkbox = document.querySelector('input');
 
-            checkbox.addEventListener('change', (event) => {
+            checkbox.addEventListener('change', (event)=>{
                 if(event.currentTarget.checked){
-                    timerId = setInterval(() => {
+                    timerId = setInterval(()=>{
                         h1.textContent = `${++timer}초`;
                     }, 1000);
                 }else{

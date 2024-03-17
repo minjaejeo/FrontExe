@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        document.addEventListener('DOMContentLoaded', () =>{
+        document.addEventListener('DOMContentLoaded', () => {
             const $btnTrigger = document.querySelector('#btnTrigger');
             const $btnReceiver = document.querySelector('#btnReceiver');
-
             $btnTrigger.addEventListener('click', () => {
                 console.log('이벤트 전송');
 
@@ -17,24 +16,23 @@
                 $btnReceiver.dispatchEvent(event);
 
                 // 사용자 정의 이벤트
-                const customEvent = new CustomEvent('happy',{detail:{
-                    name : '홍길동',
-                    age : 24,
-                    job : '활빈당'
+                const customEvent = new CustomEvent('happy',{detail: {
+                    name: '홍길동',
+                    age: 24,
+                    job: '활빈당'
                 }});
                 $btnReceiver.dispatchEvent(customEvent);
             });
-
             $btnReceiver.addEventListener('click', () => {
-                console.log('************이벤트 수신************');
-            });
+                console.log('*********이벤트 수신*********');
 
-            $btnReceiver.addEventListener('happy', (event)=>{
+            });
+            $btnReceiver.addEventListener('happy', (event)=> {
                 let output = '';
                 output += event.detail.name + '\n';
                 output += event.detail.age + '\n';
                 output += event.detail.job + '\n';
-                console.log();
+                console.log(output);
             });
         });
     </script>
@@ -42,5 +40,6 @@
 <body>
     <button id="btnTrigger">이벤트 발생</button>
     <button id="btnReceiver">이벤트 수신</button>
+
 </body>
 </html>
